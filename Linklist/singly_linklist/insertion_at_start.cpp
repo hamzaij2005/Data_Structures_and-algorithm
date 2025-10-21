@@ -16,6 +16,7 @@ void display(){
     node* temp=head;
     while(temp!=NULL){
         cout<<temp->data<<"->";
+        temp=temp->next;
     }
     cout<<"NULL";
 }
@@ -27,5 +28,6 @@ int main(){
     insert_at_start(400);
     insert_at_start(500);
     display();
+
     return 0;
 }
