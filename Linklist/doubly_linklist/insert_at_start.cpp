@@ -9,9 +9,10 @@ class node{
 node* head=NULL;
 
 void insert(int value){
-    node* newnode=new node;
+    node* newnode= new node;
     newnode->data=value;
     newnode->next=head;
+    newnode->pre=NULL;
     if(head!=NULL){
         head->pre=newnode;
     }
@@ -25,6 +26,7 @@ void display(){
     }
     cout<<"NULL"<<endl;
 }
+
 int main(){
     insert(100);
     insert(200);
